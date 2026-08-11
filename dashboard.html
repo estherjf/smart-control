@@ -1,162 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Smart Control</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
+
 <body>
-    <header>
-        <img src="assets/images/file_000000004444822fa6e6201d9d9b4f6a(1).png" alt="Logo Smart Control" width="200" height="200">
+    <header class="cabecalho">
+        <div class="esquerda">
+            <img
+                class="logo"
+                src="assets/images/lampada.png"
+                alt="Logo Smart Control">
+            <h1 class="titulo"> Dashboard Geral </h1>
+        </div>
+
+        <details class="menu">
+            <summary>
+                <img class="icone-menu" src="assets/images/hamburguer.png" alt="Menu">
+            </summary>
+
+            <div class="menu-caixa">
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+                <a href="#">Perfil</a>
+                <a href="index.html">Sair</a>
+            </div>
+        </details>
     </header>
 
-    <h1>Dashboard</h1>
-    
+    <main class="conteudo">
+        <h2 class="titulo-comodos">Cômodos</h2>
+
+        <section class="comodos">
+            <div class="card">
+                <span class="badge">Ativo</span>
+                <h3 class="nome-comodo">Quarto Principal</h3>
+
+                <div class="grafico">
+                    <p class="titulo-grafico">Consumo de energia </p>
+
+                    <div class="barras">
+                        <div class="barra pequena"></div>
+                        <div class="barra media"></div>
+                        <div class="barra grande"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="badge alerta">3 Alertas</span>
+
+                <h3 class="nome-comodo">Sala</h3>
+
+                <div class="grafico">
+                    <p class="titulo-grafico">Consumo de energia</p>
+
+                    <div class="barras">
+                        <div class="barra media"></div>
+                        <div class="barra grande"></div>
+                        <div class="barra pequena"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="badge">Ativo</span>
+                <h3 class="nome-comodo">Cozinha</h3>
+                <div class="grafico">
+                    <p class="titulo-grafico">Consumo de energia</p>
+
+                    <div class="barras">
+                        <div class="barra grande"></div>
+                        <div class="barra pequena"></div>
+                        <div class="barra media"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="badge">Ativo</span>
+                <h3 class="nome-comodo">Outros Cômodos</h3>
+
+                <div class="grafico">
+                    <p class="titulo-grafico">Consumo de energia</p>
+                    <div class="barras">
+                        <div class="barra media"></div>
+                        <div class="barra pequena"></div>
+                        <div class="barra grande"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relatorio">
+            <h2 class="titulo-secao"></h2>Relatório de acessos recentes</h2>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Gustavo Silva</td>
+                        <td>08/07/2026</td>
+                        <td>17:45</td>
+                        <td>Gerente</td>
+                    </tr>
+                    <tr>
+                        <td>Mariana Santana</td>
+                        <td>16/04/2026</td>
+                        <td>08:23</td>
+                        <td>Administrador</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
 
 
-    <nav>        
-        <details>
-            <summary>Menu</summary>
-            <ul>
-                <li><a href="#">Relatórios</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li>
-                    <details>
-                        <summary>Perfil</summary>
-                        <ul>
-                            <li><a href="index.html">Sair</a></li>
-                        </ul>
-                    </details>
-                </li>
-            </ul>
-        </details>
         
-        <h2>Cômodos</h2>
-        <div class="comodos">
+        <section class="localizacao">
+            <h2 class="titulo-secao">Sede da empresa</h2>
+            <iframe
+                class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.0882049939755!2d-43.347133!3d-21.776847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b426addc92b%3A0xc6edcb558af22943!2sMontreal%20Constru%C3%A7%C3%B5es!5e0!3m2!1spt-BR!2sbr!4v1785950247732!5m2!1spt-BR!2sbr"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
+    </main>
 
-            <div id="quarto">
-                <h2>Quarto principal</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQex6w62DxPAG0050XYGiVrvvRq-mTVdw_IBZh7Di14dFM39zFA-t6iGKc&s=10" alt="Quarto" width="100">
-                <h3>Consumo de energia:</h3>
-                <div id="grafico-quarto">
-                    <div>
-                        <h4>aparelho 1</h4>
-                        <div class= "coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 3</h4>
-                        <div class="coluna"></div>
-                    </div>
-    
-                </div>  
-            </div>
-
-
-            <div id="sala"> 
-                <h2>Sala</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsBPqgQ7lzNXTQU8gO66lTVhjVoXI-NcssN_SB5Bmrnd4HGiInG5Z40CFm&s=10" alt="Sala" width="100" height="100">
-                <h3>consumo de energia:</h3>
-                <div id="grafico-sala">
-                    <div>
-                        <h4>aparelho 1</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                </div>
-            
-            </div>
-
-
-            <div id="cozinha">
-                <h2>Cozinha</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6DUqNHOtaaC9rHrYQwjWmiGKzFDntIwgAB6W-AtDNL0wTlZiI04pMVLE8&s=10" alt="Cozinha" width="100" height="100">
-                <h3>consumo de energia:</h3>
-                <div id="grafico-cozinha">
-                    <div>
-                        <h4>aparelho 1</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                </div>
-            </div>
-            
-
-
-            <div id="outroscomodos"> 
-                <h2>Outros cômodos</h2>
-                <h3>consumo de energia:</h3>
-                <div id="grafico-outros-comodos">
-                    <div>
-                        <h4>aparelho 1</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                    <div>
-                        <h4>aparelho 2</h4>
-                        <div class="coluna"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    </nav>
-    <h1>Relatório de acessos recentes</h1>
-    <table>
-        <thead>
-           <tr>
-            <th>Nome</th>
-            <th>Data</th>
-            <th>Hora</th>
-            <th>status</th>
-           </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Gustavo Silva</td>
-                <td>08/07/2026</td>
-                <td>17:45</td>
-                <td>gerente</td>
-            </tr>
-        </tbody>
-
-        <tbody>
-            <tr>
-                <td>Mariana Santana</td>
-                <td>16/04/2026</td>
-                <td>08:23</td>
-                <td>administrador</td>
-            </tr>
-        </tbody>
-
-    </table>
-
-    <h1>Sede da empresa</h1>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.0882049939755!2d-43.347133!3d-21.776847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b426addc92b%3A0xc6edcb558af22943!2sMontreal%20Constru%C3%A7%C3%B5es!5e0!3m2!1spt-BR!2sbr!4v1785950247732!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-    <footer>
-        <a href="https://pedrotech.com.br/pedrolandia/" target="_blank">Portal PedroLândia</a>
+    <footer class="rodape">
+        <a href="https://pedrotech.com.br/pedrolandia/">Portal PedroLândia</a>
     </footer>
+
 </body>
 </html>
