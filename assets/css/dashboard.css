@@ -9,6 +9,7 @@ body {
     background-color: #08084d;
     color: white;
     min-height: 100vh;
+    font-weight: bold;
 }
 
 .cabecalho {
@@ -92,9 +93,9 @@ body {
 
 .card {
     position: relative;
-    width: 210px;
+    width: 300px;
     min-height: 210px;
-    background-color: #95deff;
+    background-color: #536dab;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
@@ -118,6 +119,54 @@ body {
     font-weight: bold;
 }
 
+.aviso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #04ff47;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
 .alerta {
     background-color: #ff0000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.grafico {
+    display: flex; 
+    flex-direction: column;
+    background-color: grey;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.barras{
+    background-color: gray;
+    height: 303px;
+    display:flex;
+    align-items: flex-end;
+}
+
+.barra{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coluna{
+    background-color: yellow;
+    height: 100px;
+    width: 50px;
 }
