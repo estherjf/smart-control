@@ -65,7 +65,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 1.5rem;
 }
 
 
@@ -99,6 +99,9 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1 fr 1fr;
+    gap: 1.5rem;
 }
 
 .nome-comodo {
@@ -170,3 +173,69 @@ body {
     height: 100px;
     width: 50px;
 }
+
+#coluna1{
+    height: 150px;
+}
+
+#coluna2{
+    height: 180px;
+}
+
+#coluna3{
+    height: 60px;
+}
+
+#coluna4{
+    height: 70px;
+}
+
+#coluna5{
+    height: 190px;
+}
+
+#coluna6{
+    height: 96px;
+}
+
+#coluna7{
+    height: 195px;
+}
+
+#coluna8{
+    height: 55px;
+}
+
+#coluna9{
+    height: 125;
+}
+
+#coluna10{
+    height: 220px;
+}
+
+#coluna11{
+    height: 190px;
+}
+
+#coluna12{
+    height: 40px;
+}
+
+.tabela{
+    width: 80%;
+    margin: 30px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    background-color: #536dab;
+    color: #2a3b79;
+}
+
