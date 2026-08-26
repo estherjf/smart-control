@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #080850;
+    font-family: Arial, sans-serif;
+    min-height: 100dvh;
+}
+
+.cabecalho {
+    height: 100px;
+    background-color: #4667a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.cabecalho h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu img {
+    width: 45px;
+    height: 45px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card-login {
+    background-color: #78a6c9;
+    width: 340px;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.card-login h2 {
+    text-align: center;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card-login label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-login input[type="text"],
+.card-login input[type="email"],
+.card-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 16px;
+}
+
+.botao-login {
+    display: block;
+    margin: 10px auto 0;
+    padding: 8px 14px;
+    background-color: #48c5dc;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.criar-conta {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

@@ -8,30 +8,44 @@
     <title>Cadastro - Smart Control</title>
 </head>
 <body>
-    <header>
-        <img src="assets/images/file_000000004444822fa6e6201d9d9b4f6a(1).png" alt="Logo Smart Control" width="200" height="200">
+    <header class="cabecalho">
+        <img class="logo" src="assets/images/lampada.png" alt="Logo Smart Control">
+        <h1>Criar conta</h1>
+        <a class="menu" href="#">
+            <img src="assets/images/hamburguer.png" alt="Menu">
+        </a>
     </header>
 
-    <form action="index.html" method="get">
-        <label for="nome">Nome completo</label><br>
-        <input type="text" id="nome" name="Nome completo" placeholder="enter" required><br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="Email" placeholder="enter" required><br>
-        <label for="senha">Senha</label><br>
-        <input type="password" id="senha" name="Senha" minlength="8" placeholder="Enter" required><br>
-        <label for="nivel-acesso">Nível de acesso</label><br>
-        <select  id="nivel-acesso" name="Nível" required>
-            <option value="" hidden>Selecione uma opção</option>
-            <option value="administrador">administrador</option>
-            <option value="gerente">gerente</option>
-        </select>
-        <br><label for="termos">Aceito os termos de uso</label><br>
-        <input type="checkbox" id="termos" required><br>
-        <input type="submit" value="entrar"> <br><br>
-    </form>
-    <br>
+    <main>
+        <div class="card-login">
+            <h2>Cadastro</h2>
+            <form action="index.html" method="get">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="Nome completo" placeholder="Enter" required><br><br>
 
-    <a href="index.html">Voltar ao login</a>
-    <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="Enter" required><br><br>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="Senha" minlength="8" placeholder="Enter" required><br><br>
+
+                <label for="nivel-acesso">Nível de acesso</label>
+                <select id="nivel-acesso" name="Nível" required>
+                    <option value="" hidden>Selecione uma opção</option>
+                    <option value="administrador">administrador</option>
+                    <option value="gerente">gerente</option>
+                </select><br><br>
+
+                <label class="termos" for="termos">
+                    <input type="checkbox" id="termos" required>
+                    Aceito os termos de uso
+                </label>
+
+                <input class="botao-login" type="submit" value="Cadastrar">
+            </form>
+
+            <a class="criar-conta" href="index.html">Voltar ao login</a>
+        </div>
+    </main>
 </body>
 </html>
