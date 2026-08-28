@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/comodo.css">
+    <title>Quarto principal - Smart Control</title>
+</head>
+<body>
+    <header class="cabeçalho">
+        <div class="esquerda">
+            <img src="assets/images/lampada.png" alt="Logo smart control">
+            <h1 class="titulo">Dashboard</h1>
+        </div>
+
+        <div class="esquerda">
+            <span class="nomecomodo">Quarto principal</span>
+            <details class="menu"></details>
+            <summary>
+                <img class="icone-menu" src="assets/images/hamburguer.png" alt="Menu">
+            </summary>
+            <div class="menu-caixa">
+                <nav>
+                    <ul><a href="dashboard.html#comodos">Escolher cômodo</a></ul>
+                    <ul><a href="gerenciar-dispositivos.html">Gerenciar dispositivos</a></ul>
+                    <ul><a href="index.html">Sair</a></ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="coluna-esquerda">
+            <h2 class="subtitulo">Aparelhos</h2>
+            <div class="lista">
+                <div class="aparelho-selecionado">TV QLD Samsung</div>
+                <div class="aparelho">Ar condicionado</div>
+                <div class="persiana">Persiana</div>
+                <div class="luz">Luz</div>
+            </div>
+        </section>
+
+        <section class="coluna-direita"></section>
+        <h2 class="subtitulo">Dados de uso - Ar condicionado</h2>
+        <div class="graficos"></div>
+            <div class="caixa-grafico">
+                <p class="titulo-grafico">Consumo de energia</p>
+                <div class="pizza" style="background-image: conic-gradient(#000 0deg, #000 180deg, #fff 180deg, #fff 360deg);"></div>
+            </div>
+    </main>
+
+</body>
+</html>
