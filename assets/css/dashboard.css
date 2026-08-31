@@ -239,3 +239,53 @@ footer{
     color: #2a3b79;
 }
 
+.link-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.titulo-secao {
+    font-size: 22px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.tabela {
+    border-collapse: collapse;
+    background-color: #536dab;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tabela th,
+.tabela td {
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabela thead th {
+    background-color: #08084d;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.tabela tbody tr {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tabela tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tabela tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabela tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
