@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/dispositivos.css">
+    <title>Cadastrar Dispositivo - Smart Control</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="esquerda">
+            <img class="logo" src="assets/images/lampada.png" alt="Logo Smart Control">
+            <h1 class="titulo">Gerenciar Dispositivos</h1>
+        </div>
+        <details class="menu">
+            <summary>
+                <img class="icone-menu" src="assets/images/hamburguer.png" alt="Menu">
+            </summary>
+            <div class="menu-caixa">
+                <nav>
+                    <ul><a href="dashboard.html#comodos">Escolher Cômodo</a></ul>
+                    <ul><a href="gerenciar-dispositivos.html">Gerenciar Dispositivos</a></ul>
+                    <ul><a href="index.html">Sair</a></ul>
+                </nav>
+            </div>
+        </details>
+    </header>
+
+    <main class="conteudo">
+        <div class="caixa">
+            <label for="nome-dispositivo">Nome do Dispositivo</label>
+            <input type="text" id="nome-dispositivo" name="Nome do Dispositivo" placeholder="Enter" required>
+
+            <label for="comodo-dispositivo">Cômodo do dispositivo</label>
+            <input type="text" id="comodo-dispositivo" name="Cômodo do dispositivo" placeholder="Enter" required>
+
+            <button class="botao" type="submit">Cadastrar dispositivo</button>
+        </div>
+    </main>
+</body>
+</html>
