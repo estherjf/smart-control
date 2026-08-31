@@ -190,10 +190,6 @@ body {
     margin-bottom: 6px;
 }
 
-.coluna {
-    width: 22px;
-    background-color: #f5e642;
-}
 
 .rotulos {
     display: flex;
@@ -221,5 +217,12 @@ body {
 
 .coluna1, .coluna2, .coluna3, .coluna4, .coluna5, .coluna6 {
     width: 22px;
-    background-color: #f5e642;
+    background-color: #ffea00;
 }
+
+.coluna1 { height: 55%; }
+.coluna2 { height: 85%; }
+.coluna3 { height: 35%; }
+.coluna4 { height: 50%; }
+.coluna5 { height: 30%; }
+.coluna6 { height: 80%; }
