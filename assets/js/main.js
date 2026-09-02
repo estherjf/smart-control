@@ -25,10 +25,11 @@ function mensagem() {
 
 function iniciarBusca() {
     const campoBusca = document.getElementById("campoBusca");
-    const comodos = document.querySelectorAll(".comodo-item");
+    const comodos = document.querySelectorAll(".link-card");
     const linhasTabela = document.querySelectorAll("#tabelaAcessos tbody tr");
 
-    campoBusca.addEventListener("input", () => {
+    campoBusca.addEventListener("input", (e) => {
+        console.log(e.target.value)
         const termo = campoBusca.value.trim().toLowerCase();
 
         comodos.forEach((item) => {
