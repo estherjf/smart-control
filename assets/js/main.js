@@ -51,12 +51,12 @@ function iniciarTema() {
 
     if (localStorage.getItem("tema") === "escuro") {
         document.body.classList.add("dark-theme");
-        iconeTema.textContent = "☀️";
+        iconeTema.textContent = "modo claro";
     }
 
     btnTema.addEventListener("click", () => {
         const escuroAtivo = document.body.classList.toggle("dark-theme");
-        iconeTema.textContent = escuroAtivo ? "☀️" : "🌙";
+        iconeTema.textContent = escuroAtivo ? "modo claro" : "modo escuro";
         localStorage.setItem("tema", escuroAtivo ? "escuro" : "claro");
     });
 }
