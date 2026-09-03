@@ -106,3 +106,28 @@ body.dark-theme .logo {
     transition: transform 0.35s ease;
 }
 .sidebar.aberto { transform: translateX(0); }
+
+.sidebar-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-sidebar {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.link-sidebar:hover {
+    opacity: 0.9;
+}
