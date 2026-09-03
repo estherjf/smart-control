@@ -13,10 +13,20 @@ function DataAtual() {
 }
 
 function atualizarDataHora() {
-    document.getElementById("resultado").textContent = `Olá, ${usuario || "visitante"}! Hoje é ${DataAtual()}`;
+    const elementoResultado = document.getElementById("resultado");
+    if (!elementoResultado) {
+        return;
+    }
+
+    elementoResultado.textContent = `Olá, ${usuario || "visitante"}! Hoje é ${DataAtual()}`;
 }
 
 function mensagem() {
+    const elementoResultado = document.getElementById("resultado");
+    if (!elementoResultado) {
+        return;
+    }
+
     usuario = prompt("Digite seu nome:") || "visitante";
     atualizarDataHora();
     setInterval(atualizarDataHora, 60000);
@@ -25,11 +35,14 @@ function mensagem() {
 
 function iniciarBusca() {
     const campoBusca = document.getElementById("campoBusca");
+    if (!campoBusca) {
+        return;
+    }
+
     const comodos = document.querySelectorAll(".link-card");
     const linhasTabela = document.querySelectorAll("#tabelaAcessos tbody tr");
 
     campoBusca.addEventListener("input", (e) => {
-        console.log(e.target.value)
         const termo = campoBusca.value.trim().toLowerCase();
 
         comodos.forEach((item) => {
@@ -46,19 +59,69 @@ function iniciarBusca() {
 }
 
 
+function salvarTema(escuroAtivo) {
+    const tema = escuroAtivo ? "escuro" : "claro";
+
+    try {
+        localStorage.setItem("tema", tema);
+    } catch (erro) {
+        console.warn("Não foi possível salvar o tema no localStorage:", erro);
+    }
+
+    document.cookie = `tema=${tema}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
+}
+
+function obterTema() {
+    try {
+        const temaSalvo = localStorage.getItem("tema");
+        if (temaSalvo === "escuro" || temaSalvo === "claro") {
+            return temaSalvo;
+        }
+    } catch (erro) {
+        console.warn("Não foi possível ler o tema do localStorage:", erro);
+    }
+
+    const cookie = document.cookie
+        .split("; ")
+        .find((item) => item.startsWith("tema="));
+
+    return cookie ? cookie.split("=")[1] : null;
+}
+
+function aplicarTemaSalvo() {
+    const temaSalvo = obterTema();
+
+    if (temaSalvo === "escuro") {
+        document.body.classList.add("dark-theme");
+    }
+
+    const btnTema = document.getElementById("btnTema");
+    if (btnTema) {
+        const escuroAtivo = document.body.classList.contains("dark-theme");
+        btnTema.setAttribute("aria-label", escuroAtivo ? "Ativar modo claro" : "Ativar modo escuro");
+        btnTema.title = escuroAtivo ? "Ativar modo claro" : "Ativar modo escuro";
+    }
+}
+
 function iniciarTema() {
     const btnTema = document.getElementById("btnTema");
-    const iconeTema = document.getElementById("iconeTema");
 
-    if (localStorage.getItem("tema") === "escuro") {
+    if (!btnTema) {
+        return;
+    }
+
+    const temaSalvo = obterTema();
+    if (temaSalvo === "escuro") {
         document.body.classList.add("dark-theme");
-        iconeTema.textContent = "modo claro";
+        btnTema.setAttribute("aria-label", "Ativar modo claro");
+        btnTema.title = "Ativar modo claro";
     }
 
     btnTema.addEventListener("click", () => {
         const escuroAtivo = document.body.classList.toggle("dark-theme");
-        iconeTema.textContent = escuroAtivo ? "modo claro" : "modo escuro";
-        localStorage.setItem("tema", escuroAtivo ? "escuro" : "claro");
+        btnTema.setAttribute("aria-label", escuroAtivo ? "Ativar modo claro" : "Ativar modo escuro");
+        btnTema.title = escuroAtivo ? "Ativar modo claro" : "Ativar modo escuro";
+        salvarTema(escuroAtivo);
     });
 }
 
@@ -68,6 +131,10 @@ function iniciarMenuLateral() {
     const btnFechar = document.getElementById("btnFecharMenu");
     const sidebar = document.getElementById("sidebarMenu");
     const overlay = document.getElementById("overlayMenu");
+
+    if (!btnMenu || !sidebar || !overlay) {
+        return;
+    }
 
     const abrirMenu = () => {
         sidebar.classList.add("aberto");
@@ -79,7 +146,9 @@ function iniciarMenuLateral() {
     };
 
     btnMenu.addEventListener("click", abrirMenu);
-    btnFechar.addEventListener("click", fecharMenu);
+    if (btnFechar) {
+        btnFechar.addEventListener("click", fecharMenu);
+    }
     overlay.addEventListener("click", fecharMenu);
 
     sidebar.querySelectorAll("[data-fecha-menu]").forEach((link) => {
@@ -95,6 +164,7 @@ function iniciarMenuLateral() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    aplicarTemaSalvo();
     mensagem();
     iniciarBusca();
     iniciarTema();

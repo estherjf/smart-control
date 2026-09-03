@@ -12,8 +12,10 @@
 <body>
     <header class="cabecalho">
     <div class="esquerda">
-        <img class="logo" src="assets/images/lampada.png" alt="Modo escuro">
-        <h1 class="titulo">Dashboard Geral</h1>
+        <button id="btnTema" class="lampada-toggle botao-tema" type="button" aria-label="Ativar modo escuro" title="Alternar modo escuro">
+            <img class="logo" src="assets/images/lampada.png" alt="icone da lampada">
+        </button>
+        <h1 class="titulo">Dashboard </h1>
     </div>
 
     <div class="busca-container">
@@ -21,9 +23,6 @@
     </div>
 
     <div class="direita">
-        <button id="btnTema" class="botao-tema" type="button" aria-label="Alternar tema">
-            <span id="iconeTema">modo escuro</span>
-        </button>
         <button id="btnMenu" class="botao-menu" type="button" aria-label="Abrir menu">
             <img class="icone-menu" src="assets/images/hamburguer.png" alt="">
         </button>
@@ -35,12 +34,12 @@
 <aside id="sidebarMenu" class="sidebar">
     <div class="sidebar-topo">
         <span class="sidebar-titulo">Menu</span>
-        <button id="btnFecharMenu" class="botao-fechar" type="button" aria-label="Fechar menu">✕</button>
+        <button id="btnFecharMenu" class="botao-fechar" type="button" aria-label="Fechar menu">X</button>
     </div>
     <nav class="sidebar-nav">
         <a href="#comodos" class="link-sidebar" data-fecha-menu> Escolher Cômodo</a>
         <a href="gerenciar-dispositivos.html" class="link-sidebar" data-fecha-menu> Gerenciar Dispositivos</a>
-        <a href="index.html" class="link-sidebar link-sair" data-fecha-menu> Sair</a>
+        <a href="index.html" class="link-sidebar link-sair" data-fecha-menu> Sair </a>
     </nav>
 </aside>
     
@@ -80,7 +79,7 @@
 
             <a class="link-card" data-nome="Sala" href="sala.html">
             <div class="card">
-                <div class="card-top">
+                <div class="card-topo">
                 <span class="status status--alerta">3 Alertas</span>
                 <h3 class="nome-comodo">Sala</h3>
                 </div>

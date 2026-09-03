@@ -13,11 +13,44 @@ body.dark-theme {
     --alerta: #ffc65c;
     --borda: rgba(255, 255, 255, 0.08);
     --sombra: rgba(0, 0, 0, 0.55);
+    background-color: var(--bg-primary);
+    color: var(--texto-principal);
 }
 
-/* Só vale quando o body estiver no tema dark */
+body.dark-theme .cabecalho,
+body.dark-theme .sidebar,
+body.dark-theme .menu-caixa {
+    background-color: var(--bg-header);
+}
 
-/* Lâmpada acende no modo escuro */
+body.dark-theme .card,
+body.dark-theme .card-login,
+body.dark-theme .caixa,
+body.dark-theme .caixa-grafico,
+body.dark-theme .graficos .caixa-grafico {
+    background-color: var(--bg-card);
+    color: var(--texto-principal);
+}
+
+body.dark-theme .titulo,
+body.dark-theme .subtitulo,
+body.dark-theme .nome-comodo,
+body.dark-theme .pergunta,
+body.dark-theme .botao,
+body.dark-theme .botao-vermelho,
+body.dark-theme .botao-login,
+body.dark-theme .titulo-grafico,
+body.dark-theme .menu-caixa a,
+body.dark-theme .criar-conta,
+body.dark-theme .card-login h2,
+body.dark-theme .cabecalho h1 {
+    color: var(--texto-principal);
+}
+
+body.dark-theme .menu-caixa {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
 body.dark-theme .logo {
     filter: brightness(0) invert(1)
         drop-shadow(0 0 6px rgba(255, 205, 110, 0.85))
