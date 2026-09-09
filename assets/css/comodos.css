@@ -236,7 +236,7 @@ body {
 
 .coluna1, .coluna2, .coluna3, .coluna4, .coluna5, .coluna6 {
     width: 22px;
-    background-color: #ffea00;
+    background-color: #ffee02;
 }
 
 .coluna1 { height: 55%; }
@@ -245,3 +245,5 @@ body {
 .coluna4 { height: 50%; }
 .coluna5 { height: 30%; }
 .coluna6 { height: 80%; }
+
+

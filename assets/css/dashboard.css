@@ -343,3 +343,49 @@ footer{
     justify-content: center;
 }
 
+
+@media (max-width: 768px) {
+    .conteudo {
+        padding: 20px 15px;
+    }
+    .comodos {
+        gap: 20px;
+    }
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+    .tabela {
+        width: 100%;
+        font-size: 13px;
+    }
+    .tabela th,
+    .tabela td {
+        padding: 8px 10px;
+    }
+    .busca-container {
+        max-width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 0 12px;
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .titulo {
+        font-size: 15px;
+    }
+    .busca-container {
+        order: 3;
+        margin-top: 10px;
+    }
+    .barras {
+        height: 200px;
+    }
+    .grafico {
+        height: 220px;
+    }
+}
