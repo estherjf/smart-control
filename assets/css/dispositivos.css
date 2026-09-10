@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #08084d;
+    background: linear-gradient(180deg, #040d4d 0%, #0c1d5f 100%);
     color: white;
     min-height: 100vh;
     font-weight: bold;
@@ -22,6 +22,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 .esquerda {
@@ -81,42 +82,132 @@ body {
 }
 
 .conteudo {
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 20px 60px;
+    display: grid;
+    grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
 }
 
 .caixa,
+.caixa-listagem {
+    background: linear-gradient(180deg, rgba(120, 166, 201, 0.96), rgba(96, 145, 182, 0.96));
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    color: #0f1d3f;
+}
+
 .caixa {
-    background-color: #78a6c9;
-    width: 340px;
-    padding: 30px;
-    border-radius: 12px;
-    color: #111;
+    width: 100%;
+    padding: 28px 26px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
+}
+
+.caixa-listagem {
+    width: 100%;
+    padding: 24px 22px 18px;
 }
 
 .pergunta {
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #0b1d43;
+}
+
+.form-dispositivo {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.caixa label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0c1d38;
+}
+
+.caixa input,
+.caixa select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid rgba(7, 33, 62, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0d1836;
+    font-size: 0.96rem;
+    font-weight: 600;
+    box-shadow: inset 0 1px 2px rgba(8, 24, 51, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caixa input:focus,
+.caixa select:focus {
+    outline: none;
+    border-color: #1b6fe8;
+    box-shadow: 0 0 0 4px rgba(58, 110, 224, 0.18);
+}
+
+.caixa input::placeholder {
+    color: rgba(12, 29, 56, 0.6);
+    font-weight: 500;
+}
+
+.select-wrap {
+    position: relative;
+}
+
+.select-wrap::after {
+    content: "▾";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0d1836;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.caixa select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+    cursor: pointer;
 }
 
 .botao {
     display: block;
+    width: 100%;
     text-align: center;
-    padding: 12px;
-    background-color: #48c5dc;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #51c5ec 0%, #39a9dd 100%);
     border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #111;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0b1d43;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 10px 20px rgba(41, 135, 190, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(41, 135, 190, 0.35);
 }
 
 .botao-vermelho {
@@ -133,18 +224,99 @@ body {
     cursor: pointer;
 }
 
-.caixa label {
-    font-size: 14px;
-    font-weight: normal;
+.caixa-listagem h2 {
+    color: #f3f8ff;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
 }
 
-.caixa input {
-    padding: 10px;
+.lista-todos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 12px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(9, 34, 61, 0.08);
+    box-shadow: 0 8px 18px rgba(12, 29, 56, 0.08);
+    min-width: 0;
+}
+
+.item span {
+    color: #112852;
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: break-word;
+    min-width: 0;
+    display: block;
+}
+
+.item button {
     border: none;
     border-radius: 10px;
-    font-weight: normal;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
 }
 
-.caixa button {
-    margin-top: 10px;
+.item button:hover {
+    filter: brightness(0.98);
+    transform: translateY(-1px);
+}
+
+.item .btn-editar {
+    background: #dfeeff;
+    color: #0d3b74;
+}
+
+.item .btn-remover {
+    background: #f05a5a;
+    color: white;
+    box-shadow: 0 6px 12px rgba(197, 67, 67, 0.2);
+}
+
+@media (max-width: 860px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .cabecalho {
+        padding: 0 12px;
+    }
+
+    .titulo {
+        font-size: 0.95rem;
+    }
+
+    .conteudo {
+        padding: 28px 14px 40px;
+    }
+
+    .caixa,
+    .caixa-listagem {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .item {
+        grid-template-columns: 1fr;
+        padding: 14px 16px;
+    }
+
+    .item button {
+        width: 100%;
+    }
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <title>Outros Cômodos - Smart Control</title>
 </head>
-<body>
+<body data-comodo="outros-comodos">
     <header class="cabecalho">
         <div class="esquerda">
             <img class="logo" src="assets/images/lampada.png" alt="Logo Smart Control">
@@ -34,11 +34,7 @@
     <main class="conteudo">
         <section class="coluna-esquerda">
             <h2 class="subtitulo">Aparelhos do cômodo</h2>
-            <div class="lista">
-                <div class="aparelho selecionado">Lâmpada corredor</div>
-                <div class="aparelho">Fechadura inteligente</div>
-                <div class="aparelho">Câmera de segurança</div>
-            </div>
+            <div class="lista" id="lista-dispositivos"></div>
         </section>
 
         <section class="coluna-direita">
@@ -76,6 +72,10 @@
             </div>
         </section>
     </main>
+    
+    <script src="assets/js/dispositivos.js"></script>
+    <script src="assets/js/pagina-comodo.js"></script>
     <script src="assets/js/main.js"></script>
+    
 </body>
 </html>

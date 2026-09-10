@@ -29,13 +29,40 @@
     </header>
 
     <main class="conteudo">
-        <div class="caixa">
-            <p class="pergunta">Deseja adicionar ou remover dispositivo?</p>
+        <section class="caixa">
+            <p class="pergunta">Cadastrar / editar dispositivo</p>
+            <form id="form-dispositivo" class="form-dispositivo">
+                <div class="campo-grupo">
+                    <label for="nome-dispositivo">Nome do dispositivo</label>
+                    <input type="text" id="nome-dispositivo" placeholder="Ex: Televisão, Lâmpada, Ar-condicionado" required>
+                </div>
 
-            <a class="botao" href="cadastrar-dispositivo.html">Cadastrar dispositivo</a>
-            <a class="botao-vermelho" href="remover-dispositivos.html">Remover dispositivo</a>
-        </div>
+                <div class="campo-grupo">
+                    <label for="comodo-dispositivo">Cômodo</label>
+                    <div class="select-wrap">
+                        <select id="comodo-dispositivo" required>
+                            <option value="" disabled selected>Selecione o cômodo</option>
+                            <option value="quarto">Quarto Principal</option>
+                            <option value="sala">Sala</option>
+                            <option value="cozinha">Cozinha</option>
+                            <option value="outros-comodos">Outros Cômodos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="botao" type="submit" id="botao-salvar">Cadastrar dispositivo</button>
+            </form>
+        </section>
+
+        <section class="caixa-listagem">
+            <h2>Todos os dispositivos</h2>
+            <div id="lista-todos" class="lista-todos"></div>
+        </section>
     </main>
+
+    <script src="assets/js/dispositivos.js"></script>
+    <script src="assets/js/gerenciar.js"></script>
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>

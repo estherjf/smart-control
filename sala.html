@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <title>Sala - Smart Control</title>
 </head>
-<body>
+<body data-comodo="sala">
     <header class="cabecalho">
         <div class="esquerda">
             <img class="logo" src="assets/images/lampada.png" alt="Logo Smart Control">
@@ -34,16 +34,7 @@
     <main class="conteudo">
         <section class="coluna-esquerda">
             <h2 class="subtitulo">Aparelhos do cômodo</h2>
-            <div class="lista">
-                <div class="aparelho">Smart TV Samsung</div>
-                <div class="aparelho selecionado">Robô aspirador de pó</div>
-                <div class="aparelho">Ar condicionado Electrolux</div>
-                <div class="aparelho">Persiana elétrica motorizada</div>
-                <div class="aparelho">Lâmpada smart inteligente</div>
-                <div class="aparelho">Interruptor inteligente</div>
-                <div class="aparelho">Controle remoto inteligente</div>
-                <div class="aparelho">Poltrona elétrica reclinável</div>
-            </div>
+            <div class="lista" id="lista-dispositivos"></div>
         </section>
 
         <section class="coluna-direita">
@@ -81,6 +72,10 @@
             </div>
         </section>
     </main>
+
+    <script src="assets/js/dispositivos.js"></script>
+    <script src="assets/js/pagina-comodo.js"></script>
     <script src="assets/js/main.js"></script>
+    
 </body>
 </html>
