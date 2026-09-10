@@ -93,7 +93,7 @@ body {
 
 .caixa,
 .caixa-listagem {
-    background: linear-gradient(180deg, rgba(120, 166, 201, 0.96), rgba(96, 145, 182, 0.96));
+    background-color:#001366;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 18px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
@@ -117,7 +117,7 @@ body {
     font-size: 1.15rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #0b1d43;
+    color: #bebec0;
 }
 
 .form-dispositivo {
@@ -156,7 +156,7 @@ body {
 .caixa input:focus,
 .caixa select:focus {
     outline: none;
-    border-color: #1b6fe8;
+    border-color: #2f4d77;
     box-shadow: 0 0 0 4px rgba(58, 110, 224, 0.18);
 }
 
@@ -193,12 +193,12 @@ body {
     width: 100%;
     text-align: center;
     padding: 14px 18px;
-    background: linear-gradient(135deg, #51c5ec 0%, #39a9dd 100%);
+    background: linear-gradient(135deg, #001d9e 0%, #000004 100%);
     border: none;
     border-radius: 12px;
     font-size: 1rem;
     font-weight: 700;
-    color: #0b1d43;
+    color: #bebec0;
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(41, 135, 190, 0.28);
@@ -225,7 +225,7 @@ body {
 }
 
 .caixa-listagem h2 {
-    color: #f3f8ff;
+    color: #bebec0;
     font-size: 1.3rem;
     margin-bottom: 18px;
 }
@@ -309,6 +309,7 @@ body {
     .caixa-listagem {
         padding-left: 16px;
         padding-right: 16px;
+        
     }
 
     .item {
@@ -319,4 +320,9 @@ body {
     .item button {
         width: 100%;
     }
+}
+
+@media(max-width:480px){
+    .conteudo{padding: 30px 15px;}
+    .caixa{width: 100%; max-width: 340px;}
 }

@@ -125,7 +125,6 @@ menu a:hover{
 .card {
     position: relative;
     width: 300px;
-    /* height: 200px; */
     box-sizing: border-box;
     background-color: var(--bg-card);      
     color: var(--texto-principal);
