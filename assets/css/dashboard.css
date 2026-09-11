@@ -5,18 +5,18 @@
 }
 
 :root {
-    --bg-primary: #eef1fb;
+    --bg-primary: #08084d;      
     --bg-header: #536dab;
     --bg-card: #ffffff;
     --bg-elevado: #f4f6ff;
-    --texto-principal: #1b1f3b;
-    --texto-secundario: #545b82;
+    --texto-principal: #ffffff;  
+    --texto-secundario: #c9cbe8;
     --texto-sobre-header: #ffffff;
     --acento: #4b5bdc;
     --acento-forte: #2e3a8c;
     --sucesso: #17b26a;
     --perigo: #e5484d;
-    --borda: rgba(27, 31, 59, 0.1);
+    --borda: rgba(255, 255, 255, 0.15);  
     --sombra: rgba(30, 41, 90, 0.14);
 }
 
