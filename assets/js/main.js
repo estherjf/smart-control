@@ -163,10 +163,24 @@ function iniciarMenuLateral() {
     });
 }
 
+function iniciarValidacaoInputs() {
+    document.querySelectorAll("form input").forEach((campo) => {
+        campo.addEventListener("input", () => {
+            if (campo.type === "email" && campo.value && !campo.value.includes("@")) {
+                campo.setCustomValidity("Coloque o e-mail completo (ex: nome@dominio.com)");
+            } else {
+                campo.setCustomValidity("");
+            }
+            campo.reportValidity();
+        });
+    });
+
+
 document.addEventListener("DOMContentLoaded", () => {
     aplicarTemaSalvo();
     mensagem();
     iniciarBusca();
     iniciarTema();
     iniciarMenuLateral();
+    iniciarValidacaoInputs();
 });

@@ -177,6 +177,7 @@ menu a:hover{
     background-color: grey;
     height: 300px;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .barras{
@@ -184,6 +185,7 @@ menu a:hover{
     height: 303px;
     display:flex;
     align-items: flex-end;
+    overflow: hidden;
 }
 
 .barra{
@@ -232,7 +234,7 @@ menu a:hover{
 }
 
 #coluna9{
-    height: 125;
+    height: 125px;
 }
 
 #coluna10{
@@ -386,5 +388,8 @@ footer{
     }
     .grafico {
         height: 220px;
+    }
+    .coluna{
+        max-height: 130px;
     }
 }
