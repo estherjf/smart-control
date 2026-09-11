@@ -174,7 +174,7 @@ function iniciarValidacaoInputs() {
             campo.reportValidity();
         });
     });
-
+}  
 
 document.addEventListener("DOMContentLoaded", () => {
     aplicarTemaSalvo();
